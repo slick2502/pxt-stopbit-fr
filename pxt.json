@@ -13,6 +13,7 @@
     "card": {
         "name": "Feu Tricolore",
         "description": "Blocs en français pour le Kitronik STOP:bit",
-        "imageUrl": "https://raw.githubusercontent.com/slick2502/pxt-stopbit-fr/main/feu_vignette.png"
+        "imageUrl": "https://raw.githubusercontent.com/slick2502/pxt-stopbit-fr/main/feu_vignette.png",
+        "icon": "./feu_vignette.png"
     }
 }

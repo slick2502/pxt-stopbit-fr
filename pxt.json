@@ -1,13 +1,12 @@
 {
-    "name": "Feu Tricolore",
+    "name": "FeuTricolore",
     "version": "1.0.0",
     "description": "Extension francisée pour piloter le Kitronik STOP:bit",
     "dependencies": {
         "core": "*"
     },
     "files": [
-        "extension.ts",
-        "_locales/fr/Feu Tricolore-strings.json"
+        "extension.ts"
     ],
     "public": true
 }

@@ -1,5 +1,5 @@
 {
-    "name": "Feu_tricolore",
+    "name": "FeuTricolore",
     "version": "1.0.0",
     "description": "Extension francisée pour piloter le Kitronik STOP:bit",
     "dependencies": {
@@ -8,5 +8,10 @@
     "files": [
         "extension.ts"
     ],
-    "public": true
+    "public": true,
+    "card": {
+        "name": "Vignette FeuTricolore",
+        "description": "Blocs en français pour le Kitronik STOP:bit",
+        "imageUrl": "https://github.com/slick2502/pxt-stopbit-fr/blob/main/feu_vignette.png"
+    }
 }

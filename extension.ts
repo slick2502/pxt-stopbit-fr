@@ -1,10 +1,46 @@
 /**
  * Blocs pour piloter un feu tricolore type Kitronik STOP:bit
- * Broches utilisees : Rouge = P0, Orange = P1, Vert = P2
+ * Broches utilisées : Rouge = P0, Orange = P1, Vert = P2
  */
 
 //% color="#0f9c11" icon="\uf28b"
 namespace feu_tricolore {
+
+    /**
+     * Enum pour les couleurs du feu
+     */
+    export enum CouleurFeu {
+        //% block="rouge"
+        Rouge = 0,
+        //% block="orange"
+        Orange = 1,
+        //% block="vert"
+        Vert = 2
+    }
+
+    /**
+     * Enum pour l'état de la LED
+     */
+    export enum EtatLED {
+        //% block="allumé"
+        Allume = 1,
+        //% block="éteint"
+        Eteint = 0
+    }
+
+    /**
+     * Enum pour les états du feu tricolore
+     */
+    export enum EtatFeu {
+        //% block="Stop"
+        Stop = 0,
+        //% block="Prêt à avancer"
+        PretAAvancer = 1,
+        //% block="Avancez"
+        Avancez = 2,
+        //% block="Prêt à s'arrêter"
+        PretASarreter = 3
+    }
 
     /**
      * Allume le feu rouge
@@ -16,9 +52,9 @@ namespace feu_tricolore {
     }
 
     /**
-     * Eteint le feu rouge
+     * Éteint le feu rouge
      */
-    //% block="eteindre feu rouge"
+    //% block="éteindre feu rouge"
     //% weight=99
     export function eteindreRouge(): void {
         pins.digitalWritePin(DigitalPin.P0, 0)
@@ -34,9 +70,9 @@ namespace feu_tricolore {
     }
 
     /**
-     * Eteint le feu orange
+     * Éteint le feu orange
      */
-    //% block="eteindre feu orange"
+    //% block="éteindre feu orange"
     //% weight=97
     export function eteindreOrange(): void {
         pins.digitalWritePin(DigitalPin.P1, 0)
@@ -52,16 +88,16 @@ namespace feu_tricolore {
     }
 
     /**
-     * Eteint le feu vert
+     * Éteint le feu vert
      */
-    //% block="eteindre feu vert"
+    //% block="éteindre feu vert"
     //% weight=95
     export function eteindreVert(): void {
         pins.digitalWritePin(DigitalPin.P2, 0)
     }
 
     /**
-     * Met le feu à l'etat STOP (rouge)
+     * Met le feu à l'état STOP (rouge)
      */
     //% block="état du feu : STOP"
     //% weight=90
@@ -72,7 +108,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu a l'etat PRET (rouge + orange)
+     * Met le feu à l'état PRÊT (rouge + orange)
      */
     //% block="état du feu : PRÊT"
     //% weight=89
@@ -83,7 +119,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu a l'etat AVANCEZ (vert)
+     * Met le feu à l'état AVANCEZ (vert)
      */
     //% block="état du feu : AVANCEZ"
     //% weight=88
@@ -94,7 +130,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu a l'etat RALENTIR (orange)
+     * Met le feu à l'état RALENTIR (orange)
      */
     //% block="état du feu : RALENTIR"
     //% weight=87
@@ -105,9 +141,9 @@ namespace feu_tricolore {
     }
 
     /**
-     * Eteint tous les feux
+     * Éteint tous les feux
      */
-    //% block="eteindre tous les feux"
+    //% block="éteindre tous les feux"
     //% weight=80
     export function toutEteindre(): void {
         pins.digitalWritePin(DigitalPin.P0, 0)
@@ -116,9 +152,9 @@ namespace feu_tricolore {
     }
 
     /**
-     * Controle une LED specifique du feu tricolore
+     * Contrôle une LED spécifique du feu tricolore
      */
-    //% block="Passer le feu $couleur a $etat"
+    //% block="passer le feu $couleur à $etat"
     //% weight=70
     export function controlerLED(couleur: CouleurFeu, etat: EtatLED): void {
         switch (couleur) {
@@ -135,45 +171,9 @@ namespace feu_tricolore {
     }
 
     /**
-     * Enum pour les couleurs du feu
+     * Règle l'état global du feu tricolore
      */
-    export enum CouleurFeu {
-        //% block="rouge"
-        Rouge = 0,
-        //% block="orange"
-        Orange = 1,
-        //% block="vert"
-        Vert = 2
-    }
-
-    /**
-     * Enum pour l'etat de la LED
-     */
-    export enum EtatLED {
-        //% block="allume"
-        Allume = 1,
-        //% block="eteint"
-        Eteint = 0
-    }
-
-    /**
-     * Enum pour les etats du feu tricolore
-     */
-    export enum EtatFeu {
-        //% block="Stop"
-        Stop = 0,
-        //% block="Pret a avancer"
-        PretAAvancer = 1,
-        //% block="Avancez"
-        Avancez = 2,
-        //% block="Pret a s'arreter"
-        PretASarreter = 3
-    }
-
-    /**
-     * Regle l'etat global du feu tricolore
-     */
-    //% block="regler l'etat du feu a $etat"
+    //% block="régler l'état du feu à $etat"
     //% weight=95
     export function reglerEtatFeu(etat: EtatFeu): void {
         switch (etat) {

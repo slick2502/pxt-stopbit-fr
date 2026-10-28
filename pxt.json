@@ -10,7 +10,7 @@
     ],
     "public": true,
     "card": {
-        "name": "Vignette FeuTricolore",
+        "name": "VignetteFeuTricolore",
         "description": "Blocs en français pour le Kitronik STOP:bit",
         "imageUrl": "https://github.com/slick2502/pxt-stopbit-fr/blob/main/feu_vignette.png"
     }

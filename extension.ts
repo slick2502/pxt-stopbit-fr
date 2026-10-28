@@ -154,4 +154,52 @@ namespace feu_tricolore {
         //% block="éteint"
         Éteint = 0
     }
+    
+    /**
+     * Enum pour les états du feu tricolore
+     */
+    export enum ÉtatFeu {
+        //% block="Stop"
+        Stop = 0,
+        //% block="Prêt à avancer"
+        PrêtÀAvancer = 1,
+        //% block="Avancez"
+        Avancez = 2,
+        //% block="Prêt à s'arrêter"
+        PrêtÀSarrêter = 3
+    }
+
+    /**
+     * Règle l'état global du feu tricolore
+     */
+    //% block="régler l'état du feu à %état"
+    //% weight=95
+    export function réglerÉtatFeu(état: ÉtatFeu): void {
+        switch (état) {
+            case ÉtatFeu.Stop:
+                // Rouge seul
+                pins.digitalWritePin(DigitalPin.P0, 1)
+                pins.digitalWritePin(DigitalPin.P1, 0)
+                pins.digitalWritePin(DigitalPin.P2, 0)
+                break
+            case ÉtatFeu.PrêtÀAvancer:
+                // Rouge + Orange
+                pins.digitalWritePin(DigitalPin.P0, 1)
+                pins.digitalWritePin(DigitalPin.P1, 1)
+                pins.digitalWritePin(DigitalPin.P2, 0)
+                break
+            case ÉtatFeu.Avancez:
+                // Vert seul
+                pins.digitalWritePin(DigitalPin.P0, 0)
+                pins.digitalWritePin(DigitalPin.P1, 0)
+                pins.digitalWritePin(DigitalPin.P2, 1)
+                break
+            case ÉtatFeu.PrêtÀSarrêter:
+                // Orange seul
+                pins.digitalWritePin(DigitalPin.P0, 0)
+                pins.digitalWritePin(DigitalPin.P1, 1)
+                pins.digitalWritePin(DigitalPin.P2, 0)
+                break
+        }
+    }
 }

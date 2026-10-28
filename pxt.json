@@ -1,7 +1,7 @@
 {
     "name": "FeuTricolore",
     "version": "1.0.2",
-    "description": "Extension francisée pour piloter le Kitronik STOP:bit",
+    "description": "Extension francisee pour piloter le Kitronik STOP:bit",
     "dependencies": {
         "core": "*"
     },
@@ -12,7 +12,6 @@
     "public": true,
     "card": {
         "name": "Feu Tricolore",
-        "description": "Blocs en français pour le Kitronik STOP:bit",
-        "imageUrl": "icon.png"
+        "description": "Blocs en francais pour le Kitronik STOP:bit"
     }
 }

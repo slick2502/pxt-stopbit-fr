@@ -1,9 +1,9 @@
 /**
  * Blocs pour piloter un feu tricolore type Kitronik STOP:bit
- * Broches utilisées : Rouge = P0, Orange = P1, Vert = P2
+ * Broches utilisees : Rouge = P0, Orange = P1, Vert = P2
  */
 
-//% color="#00ff00" icon="\uf28b"
+//% color="#0f9c11" icon="\uf28b"
 namespace feu_tricolore {
 
     /**
@@ -16,7 +16,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Éteint le feu rouge
+     * Eteint le feu rouge
      */
     //% block="eteindre feu rouge"
     //% weight=99
@@ -34,7 +34,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Éteint le feu orange
+     * Eteint le feu orange
      */
     //% block="eteindre feu orange"
     //% weight=97
@@ -52,7 +52,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Éteint le feu vert
+     * Eteint le feu vert
      */
     //% block="eteindre feu vert"
     //% weight=95
@@ -61,7 +61,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu à l'état STOP (rouge)
+     * Met le feu à l'etat STOP (rouge)
      */
     //% block="état du feu : STOP"
     //% weight=90
@@ -72,7 +72,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu à l'état PRÊT (rouge + orange)
+     * Met le feu a l'etat PRET (rouge + orange)
      */
     //% block="état du feu : PRÊT"
     //% weight=89
@@ -83,7 +83,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu à l'état AVANCEZ (vert)
+     * Met le feu a l'etat AVANCEZ (vert)
      */
     //% block="état du feu : AVANCEZ"
     //% weight=88
@@ -94,7 +94,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Met le feu à l'état RALENTIR (orange)
+     * Met le feu a l'etat RALENTIR (orange)
      */
     //% block="état du feu : RALENTIR"
     //% weight=87
@@ -105,7 +105,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Éteint tous les feux
+     * Eteint tous les feux
      */
     //% block="eteindre tous les feux"
     //% weight=80
@@ -116,7 +116,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Contrôle une LED spécifique du feu tricolore
+     * Controle une LED specifique du feu tricolore
      */
     //% block="Passer le feu $couleur a $etat"
     //% weight=70
@@ -147,7 +147,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Enum pour l'état de la LED
+     * Enum pour l'etat de la LED
      */
     export enum EtatLED {
         //% block="allume"
@@ -157,7 +157,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Enum pour les états du feu tricolore
+     * Enum pour les etats du feu tricolore
      */
     export enum EtatFeu {
         //% block="Stop"
@@ -171,7 +171,7 @@ namespace feu_tricolore {
     }
 
     /**
-     * Règle l'état global du feu tricolore
+     * Regle l'etat global du feu tricolore
      */
     //% block="regler l'etat du feu a $etat"
     //% weight=95

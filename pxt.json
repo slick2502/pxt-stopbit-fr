@@ -1,12 +1,13 @@
 {
     "name": "FeuTricolore",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Extension francisée pour piloter le Kitronik STOP:bit",
     "dependencies": {
         "core": "*"
     },
     "files": [
-        "extension.ts"
+        "extension.ts",
+        "feu_vignette.png"
     ],
     "public": true,
     "card": {

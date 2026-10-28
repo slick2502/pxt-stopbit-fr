@@ -1,5 +1,5 @@
 {
-    "name": "FeuTricolore",
+    "name": "Kitronik STOP:bit FR",
     "version": "1.0.0",
     "description": "Extension francisée pour piloter le Kitronik STOP:bit",
     "dependencies": {

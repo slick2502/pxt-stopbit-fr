@@ -8,5 +8,10 @@
     "files": [
         "extension.ts"
     ],
-    "public": true
+    "public": true,
+    "card": {
+        "name": "Feu Tricolore",
+        "description": "Blocs en français pour le Kitronik STOP:bit",
+        "imageUrl": "https://raw.githubusercontent.com/slick2502/pxt-stopbit-fr/main/feu_vignette.png"
+    }
 }

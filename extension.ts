@@ -172,7 +172,7 @@ namespace feu_tricolore {
     /**
      * Règle l'état global du feu tricolore
      */
-    //% block="régler l'état du feu à %état"
+    //% block="régler l'état du feu à $etat"
     //% weight=95
     export function réglerÉtatFeu(état: ÉtatFeu): void {
         switch (état) {

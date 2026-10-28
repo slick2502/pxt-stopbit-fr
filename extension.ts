@@ -114,4 +114,44 @@ namespace feu_tricolore {
         pins.digitalWritePin(DigitalPin.P1, 0)
         pins.digitalWritePin(DigitalPin.P2, 0)
     }
+    /**
+     * Contrôle une LED spécifique du feu tricolore
+     */
+    //% block="allumer/éteindre feu %couleur à %etat"
+    //% weight=70
+    export function controlerLED(couleur: CouleurFeu, etat: EtatLED): void {
+        switch (couleur) {
+            case CouleurFeu.Rouge:
+                pins.digitalWritePin(DigitalPin.P0, etat === EtatLED.Allumé ? 1 : 0)
+                break
+            case CouleurFeu.Orange:
+                pins.digitalWritePin(DigitalPin.P1, etat === EtatLED.Allumé ? 1 : 0)
+                break
+            case CouleurFeu.Vert:
+                pins.digitalWritePin(DigitalPin.P2, etat === EtatLED.Allumé ? 1 : 0)
+                break
+        }
+    }
+
+    /**
+     * Enum pour les couleurs du feu
+     */
+    export enum CouleurFeu {
+        //% block="rouge"
+        Rouge = 0,
+        //% block="orange"
+        Orange = 1,
+        //% block="vert"
+        Vert = 2
+    }
+
+    /**
+     * Enum pour l'état de la LED
+     */
+    export enum EtatLED {
+        //% block="allumé"
+        Allumé = 1,
+        //% block="éteint"
+        Éteint = 0
+    }
 }

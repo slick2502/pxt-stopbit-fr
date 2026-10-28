@@ -3,7 +3,7 @@
  * Broches utilisées : Rouge = P0, Orange = P1, Vert = P2
  */
 
-//% color="#FF0000" icon="\uf28b"
+//% color="#00ff00" icon="\uf28b"
 namespace feu_tricolore {
 
     /**
@@ -118,7 +118,7 @@ namespace feu_tricolore {
     /**
      * Contrôle une LED spécifique du feu tricolore
      */
-    //% block="allumer/eteindre feu $couleur a $etat"
+    //% block="Passer le feu $couleur a $etat"
     //% weight=70
     export function controlerLED(couleur: CouleurFeu, etat: EtatLED): void {
         switch (couleur) {
